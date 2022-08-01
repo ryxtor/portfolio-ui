@@ -2,15 +2,16 @@ import Navbar from './components/Navbar';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
+import Showcase from './pages/Showcase';
 
 function App() {
   return (
     <>
       <Navbar />
-      <p className="font-bold underline">Hello!</p>
+      <Showcase />
       <About />
-      <Contact />
       <Projects />
+      <Contact />
     </>
   );
 }
