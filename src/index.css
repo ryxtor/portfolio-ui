@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
 html {
   scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,4 +41,32 @@ body {
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.heading::after {
+  background-color: #8424aa;
+  content: "";
+  display: block;
+  height: 0.4rem;
+  margin: 0.8rem auto 0;
+  width: 8rem;
+}
+
+.description {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.description span {
+  font-family: 'Finger Paint', cursive;
+  color: #8424aa;
+}
+
+.skills {
+  padding: 1rem;
+}
+
+#skills img {
+  height: 70px;
 }
