@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -109,13 +110,11 @@ body {
 }
 
 .tag {
-  background: #ccc;
   border-radius: 50px;
   font-size: 16px;
   color: #fff;
-  padding: 2px 10px;
+  padding: 0.5rem;
   text-transform: uppercase;
-  cursor: pointer;
 }
 
 .tag-teal {
@@ -160,7 +159,6 @@ body {
   position: absolute;
   display: block;
   content: "";
-  z-index: 0;
   width: 0;
   height: 0;
   border-radius: 100%;
@@ -174,6 +172,21 @@ body {
   padding-top: calc(var(--width) * 2.4);
 }
 
+.skill-hover {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  transform: translate(0%, -5%);
+  width: 80%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  margin: 0 auto;
+}
+
+.skill-hover img {
+  object-fit: contain;
+}
+
 .icon-hover {
   position: absolute;
   top: 50%;
@@ -185,7 +198,8 @@ body {
   transition: opacity 0.3s;
 }
 
-.HOVER:hover .icon-hover {
+.HOVER:hover .icon-hover,
+.HOVER:hover .skill-hover {
   opacity: 1;
 }
 

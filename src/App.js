@@ -17,6 +17,7 @@ function App() {
       <Skills />
       <SeparatorBottom />
       <Projects />
+      <Separator />
       <Contact />
     </>
   );

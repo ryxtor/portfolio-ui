@@ -46,6 +46,29 @@ const Project = ({ project }) => {
     Git,
   };
 
+  const colors = [
+    '#A45EE9',
+    '#8B008B',
+    '#592693',
+    '#2C041D',
+    '#4B0076',
+    '#D34DD2',
+    '#AF69ED',
+    '#4CO212',
+    '#A50B5E',
+    '#873260',
+    '#601A3E',
+    '#29021A',
+    '#4D0F28',
+    '#9E7BB3',
+    '#957A81',
+    '#311465',
+    '#9866C7',
+    '#BF92E4',
+    '#C8A2C9',
+    '#B47EE5',
+  ];
+
   useEffect(() => {
     const card = `card-${project.id}`;
     const element = document.getElementById(card);
@@ -64,31 +87,46 @@ const Project = ({ project }) => {
       ELEMENTS_SPAN[0].style.top = `${e.pageY - element.offsetTop}px`;
     });
   }, [project]);
+
+  const truncate = (str) => `${str.substring(0, 200)}... `;
+
   return (
-    <div className="containers">
-      <div className="card">
+    <div
+      className="containers"
+      data-aos="fade-up-left"
+    >
+      <div
+        className="card shadow-xl"
+      >
         <div id={`card-${project.id}`} className="card-header HOVER relative">
           <span id={`span-${project.id}`} />
           <div className="icon-hover flex gap-10">
             <a href={project.live_demo} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faEye} className="card-icon" size="2x" color="white" />
+              <FontAwesomeIcon icon={faEye} className="card-icon hover:text-purple-800 drop-shadow transition" title="Live Demo" size="2x" color="white" />
             </a>
             <a href={project.github_link} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faGithub} className="card-icon" size="2x" color="white" />
+              <FontAwesomeIcon icon={faGithub} className="card-icon hover:text-purple-800 drop-shadow transition" title="GitHub Repository" size="2x" color="white" />
             </a>
           </div>
-          <div>
+          <div className="skill-hover flex items-center">
             {project.skills.map((skill) => (
-              <img key={skill.id} src={icons[skill.name]} alt={skill.name} />
+              <img key={skill.id} src={icons[skill.name]} alt={skill.name} title={skill.name} className="h-7 drop-shadow" />
             ))}
           </div>
 
           <img src={project.image} alt={project.name} />
         </div>
         <div className="card-body">
-          <span className="tag tag-teal mx-auto mb-4">{project.name}</span>
-          <p>
-            {project.description}
+          <span className="tag mx-auto mb-4 shadow-md" style={{ background: colors[project.id] }}>{project.name}</span>
+          <p className="font-Raleway m-0 text-[0.9rem]">
+            { project.description.length > 200
+              ? (
+                <>
+                  {truncate(project.description)}
+                  <a href={project.github_link} target="_blank" rel="noreferrer" className="inline underline text-blue-500">Read more</a>
+                </>
+              )
+              : project.description}
           </p>
         </div>
       </div>
