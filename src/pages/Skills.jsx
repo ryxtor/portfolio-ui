@@ -29,7 +29,7 @@ const Skills = () => {
   return (
     <div className="h-auto bg-gray-200 py-10 font-Raleway" id="skills">
       <div className="flex flex-col items-center justify-start" data-aos="fade-left">
-        <h1 className="text-3xl font-bold text-center heading mb-10">Skills</h1>
+        <h1 className="text-3xl font-bold text-center heading mb-10 font-Finger-Paint">Skills</h1>
         <div className="container flex flex-wrap justify-center items-center gap-4 p-4">
           <img src={html} alt="html" title="HTML" className="h-[70px]" />
           <img src={css} alt="css" title="CSS" className="h-[70px]" />
