@@ -4,9 +4,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 html,
@@ -17,6 +20,10 @@ body {
 
 body {
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .hover-underline-animation {
@@ -52,21 +59,32 @@ body {
   width: 8rem;
 }
 
-.description {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  line-height: 1.5;
+.HOVER {
+  --width: 100%;
+  --time: 0.7s;
 }
 
-.description span {
-  font-family: 'Finger Paint', cursive;
-  color: #8424aa;
+.HOVER span {
+  transform: translate(-50%, -50%);
+  transition: width var(--time), padding-top var(--time);
 }
 
-.skills {
-  padding: 1rem;
+.HOVER:hover span {
+  width: calc(var(--width) * 2.4);
+  padding-top: calc(var(--width) * 2.4);
 }
 
-#skills img {
-  height: 70px;
+.skill-hover {
+  transform: translate(0%, -5%);
+  transition: opacity 0.3s;
+}
+
+.icon-hover {
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+}
+
+.HOVER:hover .icon-hover,
+.HOVER:hover .skill-hover {
+  opacity: 1;
 }

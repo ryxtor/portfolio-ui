@@ -5,6 +5,7 @@ import Projects from './pages/Projects';
 import Showcase from './pages/Showcase';
 import Separator from './components/Separator';
 import Skills from './pages/Skills';
+import SeparatorBottom from './components/SeparatorBottom';
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       <Separator />
       <About />
       <Skills />
+      <SeparatorBottom />
       <Projects />
+      <Separator />
       <Contact />
     </>
   );
