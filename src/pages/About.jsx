@@ -11,22 +11,22 @@ const About = () => {
   return (
     <div className=" h-auto bg-gray-200" id="about">
       <div className="flex flex-col items-center justify-start" data-aos="fade-right">
-        <h1 className="text-3xl font-bold text-center heading">About</h1>
-        <div className="description container bg-[#f5f5f5] rounded-2xl p-4 my-6 w-[80%] text-[1rem] md:text-[1.2rem]">
+        <h1 className="text-3xl font-bold text-center heading font-Raleway">About</h1>
+        <div className="container bg-[#f5f5f5] rounded-2xl p-4 my-6 w-[80%] text-[1rem] md:text-[1.2rem] font-Poppins">
           <p className="text-center w-[80%] my-4 mx-auto">
             Hello, my name is
             {' '}
-            <span>Lucas</span>
-            , I’ve finished
+            <span className="font-Finger-Paint text-[#8424aa]">Lucas</span>
+            , I&apos;ve finished
             {' '}
-            <span>full-stack development</span>
+            <span className="font-Finger-Paint text-[#8424aa]">full-stack development</span>
             {' '}
             course at
-            Microverse, an online school where I’m not only learning code working on real-world projects but also
+            Microverse, an online school where I&apos;m not only learning code working on real-world projects but also
             learning how to work in teams from different parts of the world doing pair programming using JavaScript,
             React, Redux, Ruby and Rails, and I&apos;m even a
             {' '}
-            <span>mentor</span>
+            <span className="font-Finger-Paint text-[#8424aa]">mentor</span>
             {' '}
             there.
           </p>

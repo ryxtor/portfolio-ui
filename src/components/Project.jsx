@@ -92,32 +92,32 @@ const Project = ({ project }) => {
 
   return (
     <div
-      className="containers"
+      className="flex justify-evenly flex-wrap w-auto xl:w-[26%]"
       data-aos="fade-up-left"
     >
       <div
-        className="card shadow-xl"
+        className="shadow-xl overflow-hidden rounded-lg w-[300px] m-[10px]"
       >
-        <div id={`card-${project.id}`} className="card-header HOVER relative">
-          <span id={`span-${project.id}`} />
-          <div className="icon-hover flex gap-10">
+        <div id={`card-${project.id}`} className="HOVER relative inline-block overflow-hidden">
+          <span id={`span-${project.id}`} className="absolute block w-0 h-0 rounded-full bg-black opacity-50" />
+          <div className="icon-hover flex gap-10 absolute top-[50%] left-[50%] m-0 p-0 opacity-0">
             <a href={project.live_demo} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faEye} className="card-icon hover:text-purple-800 drop-shadow transition" title="Live Demo" size="2x" color="white" />
+              <FontAwesomeIcon icon={faEye} className="hover:text-purple-800 drop-shadow transition" title="Live Demo" size="2x" color="white" />
             </a>
             <a href={project.github_link} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faGithub} className="card-icon hover:text-purple-800 drop-shadow transition" title="GitHub Repository" size="2x" color="white" />
+              <FontAwesomeIcon icon={faGithub} className="hover:text-purple-800 drop-shadow transition" title="GitHub Repository" size="2x" color="white" />
             </a>
           </div>
-          <div className="skill-hover flex items-center">
+          <div className="skill-hover flex items-center absolute bottom-5 left-10 w-[80%] opacity-0 mx-auto">
             {project.skills.map((skill) => (
-              <img key={skill.id} src={icons[skill.name]} alt={skill.name} title={skill.name} className="h-7 drop-shadow" />
+              <img key={skill.id} src={icons[skill.name]} alt={skill.name} title={skill.name} className="h-7 drop-shadow w-[100%] object-contain" />
             ))}
           </div>
 
-          <img src={project.image} alt={project.name} />
+          <img src={project.image} alt={project.name} className="w-[100%] h-[200px] object-cover" />
         </div>
-        <div className="card-body">
-          <span className="tag mx-auto mb-4 shadow-md" style={{ background: colors[project.id] }}>{project.name}</span>
+        <div className="flex flex-col items-start p-[20px] min-h-[250px]">
+          <span className="text-white mx-auto mb-4 shadow-md p-2 rounded-[50px] font-Raleway" style={{ background: colors[project.id] }}>{project.name}</span>
           <p className="font-Raleway m-0 text-[0.9rem]">
             { project.description.length > 200
               ? (
