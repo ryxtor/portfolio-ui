@@ -85,9 +85,13 @@ const Contact = () => {
                 </button>
               </div>
               <div className="p-2 w-full pt-8 border-t border-gray-200 text-center">
-                <a href="google.com" className="text-indigo-500">
-                  lucasbonnefon@outlook.com
-                </a>
+                <p className="font-Raleway">
+                  Don&apos;t want to fill out the form? You can reach me directly at
+                  {' '}
+                  <a href="mailto:lucasbonnefon@outlook.com" className="text-purple-700 underline">
+                    lucasbonnefon@outlook.com
+                  </a>
+                </p>
               </div>
             </form>
           </div>
