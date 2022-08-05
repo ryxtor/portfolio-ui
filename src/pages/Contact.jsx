@@ -4,7 +4,7 @@ const Contact = () => (
       <div className="container px-5 py-14 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 heading font-Finger-Paint">
-            Contact Us
+            Contact Me
           </h1>
           <p className="lg:w-2/3 mx-auto font-Raleway leading-relaxed text-base">Feel free to drop a line anytime!</p>
         </div>
@@ -19,6 +19,7 @@ const Contact = () => (
                     type="text"
                     id="name"
                     name="name"
+                    placeholder="John Doe"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-purple-500 text-base outline-none font-Raleway text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </label>
@@ -33,6 +34,7 @@ const Contact = () => (
                     type="email"
                     id="email"
                     name="email"
+                    placeholder="example@email.com"
                     className="w-full font-Raleway bg-gray-100 rounded border border-gray-300 focus:border-purple-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </label>
@@ -46,6 +48,7 @@ const Contact = () => (
                     required
                     id="message"
                     name="message"
+                    placeholder="Your message here..."
                     className="w-full font-Raleway bg-gray-100 rounded border border-gray-300 focus:border-purple-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   />
                 </label>
@@ -61,7 +64,7 @@ const Contact = () => (
             </div>
             <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
               <a href="google.com" className="text-indigo-500">
-                example@email.com
+                lucasbonnefon@outlook.com
               </a>
               <p className="leading-normal my-5">
                 49 Smith St.
