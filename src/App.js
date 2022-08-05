@@ -8,6 +8,8 @@ import Separator from './components/Separator';
 import Skills from './pages/Skills';
 import SeparatorBottom from './components/SeparatorBottom';
 import 'react-toastify/dist/ReactToastify.css';
+import SeparatorFooter from './components/SeparatorFooter';
+import Footer from './pages/Footer';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <Projects />
       <Separator />
       <Contact />
+      <SeparatorFooter />
+      <Footer />
     </>
   );
 }
