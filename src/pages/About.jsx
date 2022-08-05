@@ -11,7 +11,7 @@ const About = () => {
   return (
     <div className=" h-auto bg-gray-200" id="about">
       <div className="flex flex-col items-center justify-start" data-aos="fade-right">
-        <h1 className="text-3xl font-bold text-center heading font-Raleway">About</h1>
+        <h1 className="text-3xl font-bold text-center heading font-Finger-Paint">About</h1>
         <div className="container bg-[#f5f5f5] rounded-2xl p-4 my-6 w-[80%] text-[1rem] md:text-[1.2rem] font-Poppins">
           <p className="text-center w-[80%] my-4 mx-auto">
             Hello, my name is
