@@ -3,7 +3,7 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Typed from 'react-typed';
 import AOS from 'aos';
-import me from '../images/me.jpg';
+import me from '../images/me.webp';
 
 const Showcase = () => {
   AOS.init({
@@ -27,21 +27,21 @@ const Showcase = () => {
         </p>
         <div className="flex items-center justify-center md:justify-start">
           <a href="mailto:lucasbonnefon@outlook.com" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faEnvelope} size="2x" className="mr-6 hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
+            <FontAwesomeIcon icon={faEnvelope} size="2x" title="Email" className="mr-6 hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
           </a>
           <a href="https://github.com/ryxtor" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faGithub} size="2x" className="mr-6 hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
+            <FontAwesomeIcon icon={faGithub} size="2x" title="GitHub" className="mr-6 hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
           </a>
           <a href="https://www.linkedin.com/in/lucasbonnefon/" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faLinkedin} size="2x" className="mr-6 hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
+            <FontAwesomeIcon icon={faLinkedin} size="2x" title="LinkedIn" className="mr-6 hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
           </a>
           <a href="https://twitter.com/Ryxtor" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faTwitter} size="2x" className="hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
+            <FontAwesomeIcon icon={faTwitter} size="2x" title="Twitter" className="hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
           </a>
         </div>
       </div>
       <div data-aos="fade-left" data-aos-delay="1500" className="mx-4 mt-20 md:mt-0 w-60 md:w-80">
-        <img src={me} alt="me" className="rounded-tl-[250px] rounded-tr-[200px] rounded-br-[550px] rounded-bl-[300px]" />
+        <img src={me} alt="me" width="320px" height="426.66px" className="rounded-tl-[250px] rounded-tr-[200px] rounded-br-[550px] rounded-bl-[300px]" />
       </div>
     </div>
   );

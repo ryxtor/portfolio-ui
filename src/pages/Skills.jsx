@@ -31,25 +31,25 @@ const Skills = () => {
       <div className="flex flex-col items-center justify-start" data-aos="fade-left">
         <h1 className="text-3xl font-bold text-center heading mb-10 dark:text-gray-300 font-Finger-Paint">Skills</h1>
         <div className="container flex flex-wrap justify-center items-center gap-4 p-4">
-          <img src={html} alt="html" title="HTML" className="h-[70px]" />
-          <img src={css} alt="css" title="CSS" className="h-[70px]" />
-          <img src={javascript} alt="js" title="JavaScript" className="h-[70px]" />
-          <img src={react} alt="react" title="React" className="h-[70px]" />
-          <img src={redux} alt="redux" title="Redux" className="h-[70px]" />
-          <img src={ruby} alt="ruby" title="Ruby" className="h-[70px]" />
-          <img src={rails} alt="rails" title="Rails" className="h-[70px]" />
-          <img src={git} alt="git" title="Git" className="h-[70px]" />
-          <img src={mysql} alt="mysql" title="MySQL" className="h-[70px]" />
-          <img src={postgres} alt="postgres" title="PostgreSQL" className="h-[70px]" />
-          <img src={bootstrap} alt="bootstrap" title="Bootstrap" className="h-[70px]" />
-          <img src={tailwind} alt="tailwind" title="Tailwind" className="h-[70px]" />
-          <img src={sass} alt="sass" title="SASS" className="h-[70px]" />
-          <img src={netlify} alt="netlify" title="Netlify" className="h-[70px]" />
-          <img src={heroku} alt="heroku" title="Heroku" className="h-[70px]" />
-          <img src={webpack} alt="webpack" title="Webpack" className="h-[70px]" />
-          <img src={npm} alt="npm" title="NPM" className="h-[70px]" />
-          <img src={jest} alt="jest" title="Jest" className="h-[70px]" />
-          <img src={rspec} alt="rspec" title="RSpec" className="h-[70px]" />
+          <img src={html} alt="html" title="HTML" height="70px" width="61px" className="h-[70px]" />
+          <img src={css} alt="css" title="CSS" height="70px" width="61px" className="h-[70px]" />
+          <img src={javascript} alt="js" title="JavaScript" height="70px" width="70px" className="h-[70px]" />
+          <img src={react} alt="react" title="React" height="70px" width="70px" className="h-[70px]" />
+          <img src={redux} alt="redux" title="Redux" height="70px" width="73px" className="h-[70px]" />
+          <img src={ruby} alt="ruby" title="Ruby" height="70px" width="70.27px" className="h-[70px]" />
+          <img src={rails} alt="rails" title="Rails" height="70px" width="199.11px" className="h-[70px]" />
+          <img src={git} alt="git" title="Git" height="70px" width="70px" className="h-[70px]" />
+          <img src={mysql} alt="mysql" title="MySQL" height="70px" width="135px" className="h-[70px]" />
+          <img src={postgres} alt="postgres" title="PostgreSQL" height="70px" width="68px" className="h-[70px]" />
+          <img src={bootstrap} alt="bootstrap" title="Bootstrap" height="70px" width="88px" className="h-[70px]" />
+          <img src={tailwind} alt="tailwind" title="Tailwind" height="70px" width="117px" className="h-[70px]" />
+          <img src={sass} alt="sass" title="SASS" height="70px" width="93px" className="h-[70px]" />
+          <img src={netlify} alt="netlify" title="Netlify" height="70px" width="70px" className="h-[70px]" />
+          <img src={heroku} alt="heroku" title="Heroku" height="70px" width="63px" className="h-[70px]" />
+          <img src={webpack} alt="webpack" title="Webpack" height="70px" width="70px" className="h-[70px]" />
+          <img src={npm} alt="npm" title="NPM" height="70px" width="70px" className="h-[70px]" />
+          <img src={jest} alt="jest" title="Jest" height="70px" width="63.31px" className="h-[70px]" />
+          <img src={rspec} alt="rspec" title="RSpec" height="70px" width="70px" className="h-[70px]" />
         </div>
       </div>
     </div>

@@ -19,13 +19,13 @@ export default function Navbar() {
     if (theme === 'dark') {
       localStorage.setItem('theme', 'light');
       document.querySelector('html').removeAttribute('class');
-      document.querySelectorAll('#switch').forEach((e) => {
+      document.querySelectorAll('.switch').forEach((e) => {
         e.checked = false;
       });
     } else {
       localStorage.setItem('theme', 'dark');
       document.querySelector('html').setAttribute('class', 'dark');
-      document.querySelectorAll('#switch').forEach((e) => {
+      document.querySelectorAll('.switch').forEach((e) => {
         e.checked = true;
       });
     }
@@ -33,7 +33,7 @@ export default function Navbar() {
   useEffect(() => {
     if (localStorage.getItem('theme') === 'dark') {
       document.querySelector('html').setAttribute('class', 'dark');
-      document.querySelectorAll('#switch').forEach((e) => {
+      document.querySelectorAll('.switch').forEach((e) => {
         e.checked = true;
       });
     }
@@ -60,8 +60,8 @@ export default function Navbar() {
                 <div className="flex-shrink-0 flex items-center">
                   <p className="font-Finger-Paint dark:text-white">Lucas&apos;s Portfolio</p>
                 </div>
-                <label className="toggle-control block sm:hidden !fixed right-0 top-[14px]" htmlFor="switch">
-                  <input id="switch" type="checkbox" onClick={handleTheme} />
+                <label className="toggle-control block sm:hidden !fixed right-0 top-[14px]" htmlFor="switch" title="Switch color">
+                  <input className="switch" id="switch" type="checkbox" onClick={handleTheme} />
                   <span className="control" />
                 </label>
 
@@ -82,8 +82,8 @@ export default function Navbar() {
                         {item.name}
                       </a>
                     ))}
-                    <label className="toggle-control" htmlFor="switch">
-                      <input id="switch" type="checkbox" onClick={handleTheme} />
+                    <label className="toggle-control" htmlFor="switch-desktop" title="Switch color">
+                      <input className="switch" id="switch-desktop" type="checkbox" onClick={handleTheme} />
                       <span className="control" />
                     </label>
                   </div>
