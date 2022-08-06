@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
@@ -14,15 +14,40 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const handleTheme = () => {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      localStorage.setItem('theme', 'light');
+      document.querySelector('html').removeAttribute('class');
+      document.querySelectorAll('#switch').forEach((e) => {
+        e.checked = false;
+      });
+    } else {
+      localStorage.setItem('theme', 'dark');
+      document.querySelector('html').setAttribute('class', 'dark');
+      document.querySelectorAll('#switch').forEach((e) => {
+        e.checked = true;
+      });
+    }
+  };
+  useEffect(() => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.querySelector('html').setAttribute('class', 'dark');
+      document.querySelectorAll('#switch').forEach((e) => {
+        e.checked = true;
+      });
+    }
+  }, []);
+
   return (
-    <Disclosure as="nav" className="bg-gray-100 shadow-md fixed top-0 left-0 right-0 z-50">
+    <Disclosure as="nav" className="bg-gray-100 dark:bg-gray-900 shadow-md fixed top-0 left-0 right-0 z-50">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-700">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 dark:text-gray-100 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-700">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -33,17 +58,12 @@ export default function Navbar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                    alt="Workflow"
-                  />
-                  <img
-                    className="hidden lg:block h-8 w-auto invert"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
-                    alt="Workflow"
-                  />
+                  <p className="font-Finger-Paint dark:text-white">Lucas&apos;s Portfolio</p>
                 </div>
+                <label className="toggle-control block sm:hidden !fixed right-0 top-[14px]" htmlFor="switch">
+                  <input id="switch" type="checkbox" onClick={handleTheme} />
+                  <span className="control" />
+                </label>
 
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -54,7 +74,7 @@ export default function Navbar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'hover-underline-animation text-gray-300 hover:bg-purple-200 hover:text-black',
+                          item.current ? 'bg-gray-900 text-white' : 'hover-underline-animation font-Raleway text-gray-800 dark:text-white hover:bg-purple-200 dark:hover:bg-purple-900 hover:text-black',
                           'px-4 py-2 rounded-md text-sm font-medium',
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -62,6 +82,10 @@ export default function Navbar() {
                         {item.name}
                       </a>
                     ))}
+                    <label className="toggle-control" htmlFor="switch">
+                      <input id="switch" type="checkbox" onClick={handleTheme} />
+                      <span className="control" />
+                    </label>
                   </div>
                 </div>
               </div>
@@ -76,7 +100,7 @@ export default function Navbar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-600 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-600 dark:text-gray-100 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium',
                   )}
                   aria-current={item.current ? 'page' : undefined}

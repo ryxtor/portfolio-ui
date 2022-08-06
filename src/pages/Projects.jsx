@@ -14,8 +14,8 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="h-auto" id="projects">
-      <h1 className="text-3xl font-bold text-center mb-8 heading font-Finger-Paint">Projects</h1>
+    <div className="h-auto dark:bg-gray-800" id="projects">
+      <h1 className="text-3xl font-bold text-center mb-8 heading dark:text-gray-300 font-Finger-Paint">Projects</h1>
       <div className="flex flex-wrap items-center justify-center">
         {projects.map((project) => (
           <Project key={project.id} project={project} />

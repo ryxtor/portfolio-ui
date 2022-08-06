@@ -9,24 +9,24 @@ const About = () => {
   });
 
   return (
-    <div className=" h-auto bg-gray-200" id="about">
+    <div className=" h-auto bg-gray-200 dark:bg-gray-700" id="about">
       <div className="flex flex-col items-center justify-start" data-aos="fade-right">
-        <h1 className="text-3xl font-bold text-center heading font-Finger-Paint">About</h1>
-        <div className="container bg-[#f5f5f5] rounded-2xl p-4 my-6 w-[80%] text-[1rem] md:text-[1.2rem] font-Poppins">
+        <h1 className="text-3xl font-bold text-center heading dark:text-gray-300 font-Finger-Paint">About</h1>
+        <div className="container bg-[#f5f5f5] dark:bg-gray-600 dark:text-gray-300 rounded-2xl p-4 my-6 w-[80%] text-[1rem] md:text-[1.2rem] font-Poppins">
           <p className="text-center w-[80%] my-4 mx-auto">
             Hello, my name is
             {' '}
-            <span className="font-Finger-Paint text-[#8424aa]">Lucas</span>
+            <span className="font-Finger-Paint text-[#8424aa] dark:text-purple-800">Lucas</span>
             , I&apos;ve finished
             {' '}
-            <span className="font-Finger-Paint text-[#8424aa]">full-stack development</span>
+            <span className="font-Finger-Paint text-[#8424aa] dark:text-purple-800">full-stack development</span>
             {' '}
             course at
             Microverse, an online school where I&apos;m not only learning code working on real-world projects but also
             learning how to work in teams from different parts of the world doing pair programming using JavaScript,
             React, Redux, Ruby and Rails, and I&apos;m even a
             {' '}
-            <span className="font-Finger-Paint text-[#8424aa]">mentor</span>
+            <span className="font-Finger-Paint text-[#8424aa] dark:text-purple-800">mentor</span>
             {' '}
             there.
           </p>
