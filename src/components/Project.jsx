@@ -92,11 +92,13 @@ const Project = ({ project }) => {
 
   return (
     <div
-      className="flex justify-evenly flex-wrap w-auto xl:w-[26%]"
+      className="flex justify-evenly flex-wrap w-auto xl:w-[26%] transition duration-500"
       data-aos="fade-up-left"
+      data-aos-easing="ease-out-back"
+      data-aos-duration="1200"
     >
       <div
-        className="shadow-xl overflow-hidden rounded-lg w-[300px] m-[10px]"
+        className="transition duration-500 shadow-xl overflow-hidden rounded-lg w-[300px] m-[10px] dark:bg-gray-700 dark:text-gray-300"
       >
         <div id={`card-${project.id}`} className="HOVER relative inline-block overflow-hidden">
           <span id={`span-${project.id}`} className="absolute block w-0 h-0 rounded-full bg-black opacity-50" />
