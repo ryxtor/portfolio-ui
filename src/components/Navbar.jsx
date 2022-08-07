@@ -40,14 +40,14 @@ export default function Navbar() {
   }, []);
 
   return (
-    <Disclosure as="nav" className="bg-gray-100 dark:bg-gray-900 shadow-md fixed top-0 left-0 right-0 z-50">
+    <Disclosure as="nav" className="bg-gray-100 dark:bg-gray-900 shadow-md fixed top-0 left-0 right-0 z-50 transition duration-500">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 dark:text-gray-100 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-700">
+                <Disclosure.Button className="transition duration-500 inline-flex items-center justify-center p-2 rounded-md text-gray-600 dark:text-gray-100 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-700">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -74,7 +74,7 @@ export default function Navbar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'hover-underline-animation font-Raleway text-gray-800 dark:text-white hover:bg-purple-200 dark:hover:bg-purple-900 hover:text-black',
+                          item.current ? 'bg-gray-900 text-white' : 'transition duration-500 hover-underline-animation font-Raleway text-gray-800 dark:text-white hover:bg-purple-200 dark:hover:bg-purple-900 hover:text-black',
                           'px-4 py-2 rounded-md text-sm font-medium',
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -100,7 +100,7 @@ export default function Navbar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-600 dark:text-gray-100 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'bg-gray-900 text-white' : 'transition duration-500 text-gray-600 dark:text-gray-100 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium',
                   )}
                   aria-current={item.current ? 'page' : undefined}

@@ -13,10 +13,10 @@ const Showcase = () => {
   });
 
   return (
-    <div className="dark:bg-gray-800">
+    <div className="dark:bg-gray-800 transition duration-500">
       <div id="home" className="flex flex-col md:flex-row justify-center md:justify-around gap-y-10 items-center md:h-[95vh]">
         <div data-aos="zoom-in" className="w-100 order-last md:order-first">
-          <h1 className="text-3xl text-center md:text-left text-gray-500 dark:text-gray-300 mb-4 font-Raleway">Hello! my name is</h1>
+          <h1 className="transition duration-500 text-3xl text-center md:text-left text-gray-500 dark:text-gray-300 mb-4 font-Raleway">Hello! my name is</h1>
           <h2 className="mb-4 text-center md:text-left text-5xl text-gray-500 dark:text-gray-300 hover:text-purple-700 dark:hover:text-purple-700 transition-colors duration-500 font-Finger-Paint">Lucas Bonnefon</h2>
           <p className="text-center md:text-left text-purple-700 dark:text-purple-600 text-2xl font-Raleway mb-6">
             <Typed
@@ -47,7 +47,7 @@ const Showcase = () => {
       </div>
       <div className="flex justify-center mt-10 md:mt-0">
         <a href="#about">
-          <FontAwesomeIcon icon={faAngleDown} size="2x" title="Scroll down" className="bounce text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
+          <FontAwesomeIcon icon={faAngleDown} size="2x" title="Scroll down" className="bounce text-gray-600 dark:text-gray-300 hover:text-purple-800 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
         </a>
       </div>
     </div>

@@ -16,13 +16,13 @@ const Contact = () => {
 
   return (
     <div id="contact">
-      <section className="text-gray-700 body-font relative dark:bg-gray-700 bg-gray-200">
+      <section className="transition duration-500 text-gray-700 body-font relative dark:bg-gray-700 bg-gray-200">
         <div className="container px-5 py-14 mx-auto" data-aos="zoom-in-left" data-aos-easing="ease-out-back" data-aos-duration="1200">
           <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 dark:text-gray-300 after:bg-purple-700 dark:after:bg-purple-800 after:content-[''] after:block after:h-1 after:my-3 after:mx-auto after:w-32 font-Finger-Paint">
+            <h1 className="transition duration-500 sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 dark:text-gray-300 after:bg-purple-700 dark:after:bg-purple-800 after:content-[''] after:block after:h-1 after:my-3 after:mx-auto after:w-32 font-Finger-Paint">
               Contact Me
             </h1>
-            <p className="lg:w-2/3 mx-auto dark:text-gray-300 font-Raleway leading-relaxed text-base">Feel free to drop a line anytime!</p>
+            <p className="transition duration-500 lg:w-2/3 mx-auto dark:text-gray-300 font-Raleway leading-relaxed text-base">Feel free to drop a line anytime!</p>
           </div>
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
             <form
@@ -84,11 +84,11 @@ const Contact = () => {
                   Send
                 </button>
               </div>
-              <div className="p-2 w-full pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
-                <p className="font-Raleway dark:text-gray-300">
+              <div className="p-2 w-full pt-8 text-center">
+                <p className="transition duration-500 font-Raleway dark:text-gray-300">
                   Don&apos;t want to fill out the form? You can reach me directly at
                   {' '}
-                  <a href="mailto:lucasbonnefon@outlook.com" className="text-purple-700 dark:text-purple-500 font-Finger-Paint underline">
+                  <a href="mailto:lucasbonnefon@outlook.com" className="transition duration-500 text-purple-700 dark:text-purple-500 font-Finger-Paint underline">
                     lucasbonnefon@outlook.com
                   </a>
                 </p>
