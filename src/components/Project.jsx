@@ -94,6 +94,8 @@ const Project = ({ project }) => {
     <div
       className="flex justify-evenly flex-wrap w-auto xl:w-[26%]"
       data-aos="fade-up-left"
+      data-aos-easing="ease-out-back"
+      data-aos-duration="1200"
     >
       <div
         className="shadow-xl overflow-hidden rounded-lg w-[300px] m-[10px] dark:bg-gray-700 dark:text-gray-300"

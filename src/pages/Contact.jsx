@@ -17,9 +17,9 @@ const Contact = () => {
   return (
     <div id="contact">
       <section className="text-gray-700 body-font relative dark:bg-gray-700 bg-gray-200">
-        <div className="container px-5 py-14 mx-auto">
+        <div className="container px-5 py-14 mx-auto" data-aos="zoom-in-left" data-aos-easing="ease-out-back" data-aos-duration="1200">
           <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 dark:text-gray-300 heading font-Finger-Paint">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 dark:text-gray-300 after:bg-purple-700 dark:after:bg-purple-800 after:content-[''] after:block after:h-1 after:my-3 after:mx-auto after:w-32 font-Finger-Paint">
               Contact Me
             </h1>
             <p className="lg:w-2/3 mx-auto dark:text-gray-300 font-Raleway leading-relaxed text-base">Feel free to drop a line anytime!</p>

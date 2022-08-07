@@ -58,7 +58,7 @@ export default function Navbar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <p className="font-Finger-Paint dark:text-white">Lucas&apos;s Portfolio</p>
+                  <p className="font-Finger-Paint select-none dark:text-white hover:text-purple-700 dark:hover:text-purple-700 transition-colors duration-500">Lucas&apos;s Portfolio</p>
                 </div>
                 <label className="toggle-control block sm:hidden !fixed right-0 top-[14px]" htmlFor="switch" title="Switch color">
                   <input className="switch" id="switch" type="checkbox" onClick={handleTheme} />

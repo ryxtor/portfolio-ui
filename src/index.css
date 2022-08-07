@@ -49,15 +49,6 @@ body {
   transform-origin: bottom left;
 }
 
-.heading::after {
-  background-color: #8424aa;
-  content: "";
-  display: block;
-  height: 0.4rem;
-  margin: 0.8rem auto 0;
-  width: 8rem;
-}
-
 .HOVER {
   --width: 100%;
   --time: 0.7s;
