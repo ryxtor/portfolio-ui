@@ -14,9 +14,9 @@ const About = () => (
           <span className="transition duration-500 font-Finger-Paint text-[#8424aa] dark:text-purple-800">full-stack development</span>
           {' '}
           course at
-          Microverse, an online school where I&apos;m not only learning code working on real-world projects but also
+          Microverse, an online school where I wasn&apos;t only learning code working on real-world projects but also
           learning how to work in teams from different parts of the world doing pair programming using JavaScript,
-          React, Redux, Ruby and Rails, and I&apos;m even a
+          React, Redux, Ruby and Rails, and I was a
           {' '}
           <span className="transition duration-500 font-Finger-Paint text-[#8424aa] dark:text-purple-800">mentor</span>
           {' '}
@@ -28,7 +28,7 @@ const About = () => (
           perfect replacement for that.
         </p>
         <p className="text-center w-[80%] my-4 mx-auto">
-          In my free time, I like to watch movies, play video games, and try to improve my piano skills.
+          In my free time, I like to watch movies, solve coding challenges, and try to improve my piano skills.
         </p>
       </div>
     </div>
