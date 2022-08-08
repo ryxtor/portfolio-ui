@@ -20,7 +20,7 @@ const Showcase = () => {
           <h2 className="mb-4 text-center md:text-left text-5xl text-gray-500 dark:text-gray-300 hover:text-purple-700 dark:hover:text-purple-700 transition-colors duration-500 font-Finger-Paint">Lucas Bonnefon</h2>
           <p className="text-center md:text-left text-purple-700 dark:text-purple-600 text-2xl font-Raleway mb-6">
             <Typed
-              strings={['I\'m a Full-Stack developer', 'I\'m a web designer', 'I\'m a web developer']}
+              strings={['I\'m a Full-Stack developer', 'I\'m a Front-end developer', 'I\'m a Back-end developer', 'I\'m a web developer']}
               typeSpeed={80}
               backSpeed={80}
               loop
