@@ -26,30 +26,115 @@ const Skills = () => {
     delay: 300,
   });
 
+  const skills = [
+    {
+      name: 'HTML',
+      image: html,
+      width: '61px',
+    },
+    {
+      name: 'CSS',
+      image: css,
+      width: '61px',
+    },
+    {
+      name: 'Javascript',
+      image: javascript,
+      width: '70px',
+    },
+    {
+      name: 'React',
+      image: react,
+      width: '70px',
+    },
+    {
+      name: 'Redux',
+      image: redux,
+      width: '73px',
+    },
+    {
+      name: 'Ruby',
+      image: ruby,
+      width: '70.27px',
+    },
+    {
+      name: 'Rails',
+      image: rails,
+      width: '199.11px',
+    },
+    {
+      name: 'Git',
+      image: git,
+      width: '70px',
+    },
+    {
+      name: 'MySQL',
+      image: mysql,
+      width: '135px',
+    },
+    {
+      name: 'PostgreSQL',
+      image: postgres,
+      width: '68px',
+    },
+    {
+      name: 'Bootstrap',
+      image: bootstrap,
+      width: '88px',
+    },
+    {
+      name: 'Tailwind',
+      image: tailwind,
+      width: '117px',
+    },
+    {
+      name: 'Sass',
+      image: sass,
+      width: '93px',
+    },
+    {
+      name: 'Netlify',
+      image: netlify,
+      width: '61px',
+    },
+    {
+      name: 'Heroku',
+      image: heroku,
+      width: '63px',
+    },
+    {
+      name: 'Webpack',
+      image: webpack,
+      width: '70px',
+    },
+    {
+      name: 'NPM',
+      image: npm,
+      width: '70px',
+    },
+    {
+      name: 'Jest',
+      image: jest,
+      width: '63.31px',
+    },
+    {
+      name: 'RSpec',
+      image: rspec,
+      width: '70px',
+    },
+  ];
+
   return (
     <div className="transition duration-500 h-auto bg-gray-200 dark:bg-gray-700 py-10 font-Raleway" id="skills">
       <div className="flex flex-col items-center justify-start" data-aos="fade-left">
         <h1 className="transition duration-500 text-3xl font-bold text-center after:bg-purple-700 dark:after:bg-purple-800 after:content-[''] after:block after:h-1 after:my-3 after:mx-auto after:w-32 mb-10 dark:text-gray-300 font-Finger-Paint">Skills</h1>
         <div className="container flex flex-wrap justify-center items-center gap-4 p-4">
-          <img src={html} alt="html" title="HTML" height="70px" width="61px" className="h-[70px]" />
-          <img src={css} alt="css" title="CSS" height="70px" width="61px" className="h-[70px]" />
-          <img src={javascript} alt="js" title="JavaScript" height="70px" width="70px" className="h-[70px]" />
-          <img src={react} alt="react" title="React" height="70px" width="70px" className="h-[70px]" />
-          <img src={redux} alt="redux" title="Redux" height="70px" width="73px" className="h-[70px]" />
-          <img src={ruby} alt="ruby" title="Ruby" height="70px" width="70.27px" className="h-[70px]" />
-          <img src={rails} alt="rails" title="Rails" height="70px" width="199.11px" className="h-[70px]" />
-          <img src={git} alt="git" title="Git" height="70px" width="70px" className="h-[70px]" />
-          <img src={mysql} alt="mysql" title="MySQL" height="70px" width="135px" className="h-[70px]" />
-          <img src={postgres} alt="postgres" title="PostgreSQL" height="70px" width="68px" className="h-[70px]" />
-          <img src={bootstrap} alt="bootstrap" title="Bootstrap" height="70px" width="88px" className="h-[70px]" />
-          <img src={tailwind} alt="tailwind" title="Tailwind" height="70px" width="117px" className="h-[70px]" />
-          <img src={sass} alt="sass" title="SASS" height="70px" width="93px" className="h-[70px]" />
-          <img src={netlify} alt="netlify" title="Netlify" height="70px" width="70px" className="h-[70px]" />
-          <img src={heroku} alt="heroku" title="Heroku" height="70px" width="63px" className="h-[70px]" />
-          <img src={webpack} alt="webpack" title="Webpack" height="70px" width="70px" className="h-[70px]" />
-          <img src={npm} alt="npm" title="NPM" height="70px" width="70px" className="h-[70px]" />
-          <img src={jest} alt="jest" title="Jest" height="70px" width="63.31px" className="h-[70px]" />
-          <img src={rspec} alt="rspec" title="RSpec" height="70px" width="70px" className="h-[70px]" />
+          {skills.map((skill) => (
+            <div className="flex flex-col items-center justify-center gap-3" key={skill.name}>
+              <img src={skill.image} alt={skill.name} height="70px" width={skill.width} title={skill.name} className="h-[70px]" />
+              <p className="transition duration-500 text-center text-sm font-Raleway font-semibold text-gray-700 dark:text-gray-300">{skill.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
