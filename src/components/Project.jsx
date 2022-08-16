@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
+import Modal from 'react-modal';
 import HTML from '../images/logos/html.svg';
 import CSS from '../images/logos/css.svg';
 import JavaScript from '../images/logos/javascript.svg';
@@ -72,7 +73,6 @@ const Project = ({ project }) => {
   useEffect(() => {
     const card = `card-${project.id}`;
     const element = document.getElementById(card);
-    // const title = document.getElementById(`title-${project.id}`);
     const ELEMENTS_SPAN = [];
 
     if (!ELEMENTS_SPAN[0]) { ELEMENTS_SPAN[0] = document.getElementById(`span-${project.id}`); }
@@ -88,17 +88,27 @@ const Project = ({ project }) => {
     });
   }, [project]);
 
-  const truncate = (str) => `${str.substring(0, 200)}... `;
+  const truncate = (str) => `${str.substring(0, 150)}... `;
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
   return (
     <div
-      className="flex justify-evenly flex-wrap w-auto xl:w-[26%] transition duration-500"
+      className="flex justify-center flex-wrap w-auto xl:w-[26%] transition duration-500"
       data-aos="fade-up-left"
       data-aos-easing="ease-out-back"
       data-aos-duration="1200"
     >
       <div
-        className="transition duration-500 shadow-xl overflow-hidden rounded-lg w-[300px] m-[10px] dark:bg-gray-700 dark:text-gray-300"
+        className="transition duration-500 shadow-xl overflow-hidden rounded-lg w-[300px] m-[10px] bg-gray-100 border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300"
       >
         <div id={`card-${project.id}`} className="HOVER relative inline-block overflow-hidden">
           <span id={`span-${project.id}`} className="absolute block w-0 h-0 rounded-full bg-black opacity-50" />
@@ -110,7 +120,7 @@ const Project = ({ project }) => {
               <FontAwesomeIcon icon={faGithub} className="hover:text-purple-800 drop-shadow transition" title="GitHub Repository" size="2x" color="white" />
             </a>
           </div>
-          <div className="skill-hover flex items-center absolute bottom-5 left-10 w-[80%] opacity-0 mx-auto">
+          <div className="skill-hover flex items-center absolute bottom-5 w-[100%] opacity-0 mx-auto">
             {project.skills.map((skill) => (
               <img key={skill.id} src={icons[skill.name]} alt={skill.name} title={skill.name} className="h-7 drop-shadow w-[100%] object-contain" />
             ))}
@@ -118,20 +128,85 @@ const Project = ({ project }) => {
 
           <img src={project.image} alt={project.name} className="w-[100%] h-[200px] object-cover" />
         </div>
-        <div className="flex flex-col items-start p-[20px] min-h-[250px]">
-          <span className="text-white mx-auto mb-4 shadow-md p-2 rounded-[50px] font-Raleway" style={{ background: colors[project.id] }}>{project.name}</span>
+        <div className="flex flex-col items-start p-[20px] min-h-[200px]">
+          <span className="text-gray-200 mx-auto mb-4 shadow-md p-2 rounded-[50px] font-Raleway" style={{ background: colors[project.id] }}>{project.name}</span>
           <p className="font-Raleway m-0 text-[0.9rem]">
-            { project.description.length > 200
-              ? (
-                <>
-                  {truncate(project.description)}
-                  <a href={project.github_link} target="_blank" rel="noreferrer" className="inline underline text-blue-500">Read more</a>
-                </>
-              )
-              : project.description}
+            { project.description.length > 150
+              ? truncate(project.description) : project.description }
           </p>
         </div>
+        <div className="flex justify-center gap-5 mb-3">
+          <button type="button" onClick={openModal} className="transition border border-purple-700 w-[85px] shadow-md bg-purple-800 hover:bg-purple-600 dark:hover:bg-purple-700 text-gray-200 font-Raleway font-bold py-2 px-4 rounded-lg">
+            Details
+          </button>
+          <button type="button" className="transition border border-purple-700 w-[85px] shadow-md bg-purple-800 hover:bg-purple-600 dark:hover:bg-purple-700 text-gray-200 font-Raleway font-bold py-2 px-4 rounded-lg">
+            <a href={project.github_link} target="_blank" rel="noreferrer">
+              Source
+            </a>
+          </button>
+        </div>
       </div>
+      <Modal
+        style={{
+          overlay: {
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 100,
+          },
+          content: {
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            overflow: 'auto',
+            WebkitOverflowScrolling: 'touch',
+            borderRadius: '4px',
+            outline: 'none',
+          },
+        }}
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        ariaHideApp={false}
+        className="w-[80%] md:w-[50%] bg-gray-200 dark:bg-gray-700 dark:border-gray-600 border h-auto max-h-[90%] min-h-fit md:h-[80%] rounded shadow m-auto"
+      >
+        <div className="flex flex-col items-start h-[100%]">
+          <img src={project.image} alt={project.name} className="w-[100%] h-[250px] object-cover md:object-contain md:h-auto self-center" />
+          <div className="flex h-[100%] w-[100%] items-center flex-col">
+            <h3 className="font-Finger-Paint text-purple-600 drop-shadow-lg text-xl py-3">{project.name}</h3>
+            <p className="font-Raleway dark:text-gray-300 self-center mx-3 text-[0.9rem] text-center">
+              {project.description}
+            </p>
+            <div className="flex items-center justify-around w-[80%] py-3">
+              {project.skills.map((skill) => (
+                <div className="group flex flex-col flex-grow w-[33%] items-center justify-center gap-3 " key={skill.name}>
+                  <img key={skill.id} src={icons[skill.name]} alt={skill.name} title={skill.name} className="h-7 drop-shadow w-[100%] object-contain" />
+                  <p className="transition duration-300 group-hover:text-purple-700 text-center text-sm font-Raleway font-semibold text-gray-700 dark:text-gray-300">{skill.name}</p>
+                </div>
+              ))}
+            </div>
+            <div className="flex mt-3 justify-around mb-3 w-[100%]">
+              <button type="button" className="transition bg-purple-800 hover:bg-purple-900 text-gray-200 font-Raleway font-bold py-2 px-4 rounded-lg w-[112px]">
+                <a href={project.live_demo} target="_blank" rel="noreferrer">
+                  Live Demo
+                </a>
+              </button>
+              <button type="button" className="transition bg-purple-800 hover:bg-purple-900 text-gray-200 font-Raleway font-bold py-2 px-4 rounded-lg w-[112px]">
+                <a href={project.github_link} target="_blank" rel="noreferrer">
+                  Source
+                </a>
+              </button>
+            </div>
+          </div>
+          <button type="button" onClick={closeModal} className="absolute top-0 right-0 transition duration-300 bg-gray-200 bg-opacity-0 hover:bg-gray-400 text-purple-700 drop-shadow font-Finger-Paint font-bold py-2 px-4 rounded-lg">
+            X
+          </button>
+        </div>
+      </Modal>
     </div>
   );
 };
