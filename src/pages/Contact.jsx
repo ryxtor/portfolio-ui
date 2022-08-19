@@ -1,6 +1,9 @@
 import { useRef } from 'react';
 import { useForm } from '@formspree/react';
 import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   const form = useRef(null);
@@ -84,7 +87,7 @@ const Contact = () => {
                   Send
                 </button>
               </div>
-              <div className="p-2 w-full pt-8 text-center">
+              <div className="p-2 w-full pt-8 text-center flex flex-col items-center gap-6">
                 <p className="transition duration-500 font-Raleway dark:text-gray-300">
                   Don&apos;t want to fill out the form? You can reach me directly at
                   {' '}
@@ -92,6 +95,20 @@ const Contact = () => {
                     lucasbonnefon@outlook.com
                   </a>
                 </p>
+                <div className="flex items-center justify-center md:justify-start">
+                  <a href="mailto:lucasbonnefon@outlook.com" target="_blank" rel="noreferrer" className="mr-6">
+                    <FontAwesomeIcon icon={faEnvelope} size="2x" title="Email" className=" hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
+                  </a>
+                  <a href="https://github.com/ryxtor" target="_blank" rel="noreferrer" className="mr-6">
+                    <FontAwesomeIcon icon={faGithub} size="2x" title="GitHub" className="hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/lucasbonnefon/" target="_blank" rel="noreferrer" className="mr-6">
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" title="LinkedIn" className="hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
+                  </a>
+                  <a href="https://twitter.com/Ryxtor" target="_blank" rel="noreferrer">
+                    <FontAwesomeIcon icon={faTwitter} size="2x" title="Twitter" className="hover:text-purple-800 text-gray-600 dark:text-gray-300 dark:hover:text-purple-800 transition duration-300 drop-shadow" />
+                  </a>
+                </div>
               </div>
             </form>
           </div>
