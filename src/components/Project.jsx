@@ -165,23 +165,30 @@ const Project = ({ project }) => {
             bottom: 0,
             overflow: 'auto',
             WebkitOverflowScrolling: 'touch',
-            borderRadius: '4px',
             outline: 'none',
           },
         }}
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         ariaHideApp={false}
-        className="w-[80%] md:w-[50%] bg-gray-200 dark:bg-gray-700 dark:border-gray-600 border h-auto max-h-[90%] min-h-fit md:h-[80%] rounded shadow m-auto"
+        className="w-[80%] md:w-[90%] bg-gray-200 dark:bg-gray-700 dark:border-gray-600 border h-auto max-h-[90%] min-h-fit rounded-lg shadow m-auto"
       >
         <div className="flex flex-col items-start h-[100%]">
-          <img src={project.image} alt={project.name} className="w-[100%] h-[250px] object-cover md:object-contain md:h-auto self-center" />
-          <div className="flex h-[100%] w-[100%] items-center flex-col">
-            <h3 className="font-Finger-Paint text-purple-600 drop-shadow-lg text-xl py-3">{project.name}</h3>
-            <p className="font-Raleway dark:text-gray-300 self-center mx-3 text-[0.9rem] text-center">
-              {project.description}
-            </p>
-            <div className="flex items-center justify-around w-[80%] py-3">
+          <div className="md:flex">
+
+            <img src={project.image} alt={project.name} className="w-[100%] md:w-[50%] lg:w-[60%] xl:w-[70%] h-[250px] object-cover md:object-contain md:h-auto self-center" />
+            <div className="flex h-[100%] w-[100%] items-center flex-col">
+              <div className="flex flex-col items-center">
+                <h3 className="font-Finger-Paint text-purple-600 drop-shadow-lg text-xl py-3">{project.name}</h3>
+                <p className="font-Raleway dark:text-gray-300 self-center mx-3 text-[0.9rem] text-center">
+                  {project.description}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center w-[100%] md:dark:bg-gray-800 md:bg-gray-300 ">
+
+            <div className="flex items-center justify-around w-[100%] lg:w-[60%] xl:w-[70%] py-3">
               {project.skills.map((skill) => (
                 <div className="group flex flex-col flex-grow w-[33%] items-center justify-center gap-3 " key={skill.name}>
                   <img key={skill.id} src={icons[skill.name]} alt={skill.name} title={skill.name} className="h-7 drop-shadow w-[100%] object-contain" />
@@ -189,7 +196,7 @@ const Project = ({ project }) => {
                 </div>
               ))}
             </div>
-            <div className="flex mt-3 justify-around mb-3 w-[100%]">
+            <div className="flex mt-3 justify-around mb-3 w-[100%] lg:w-[40%] xl:w-[30%]">
               <button type="button" className="transition bg-purple-800 hover:bg-purple-900 text-gray-200 font-Raleway font-bold py-2 px-4 rounded-lg w-[112px]">
                 <a href={project.live_demo} target="_blank" rel="noreferrer">
                   Live Demo
@@ -202,7 +209,7 @@ const Project = ({ project }) => {
               </button>
             </div>
           </div>
-          <button type="button" onClick={closeModal} className="absolute top-0 right-0 transition duration-300 bg-gray-200 bg-opacity-0 hover:bg-gray-400 text-purple-700 drop-shadow font-Finger-Paint font-bold py-2 px-4 rounded-lg">
+          <button type="button" onClick={closeModal} className="absolute top-[255px] md:top-0 right-0 transition ease-out duration-300 bg-gray-200 bg-opacity-0 md:hover:bg-gray-300 dark:md:hover:bg-gray-800 text-purple-700 drop-shadow font-Finger-Paint font-bold py-2 px-4 rounded-lg">
             X
           </button>
         </div>
