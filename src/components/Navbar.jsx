@@ -1,6 +1,7 @@
 import { Fragment, useEffect } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { useTranslation } from 'react-i18next';
 
 const navigation = [
   { name: 'Home', href: '#home', current: false },
@@ -30,6 +31,14 @@ export default function Navbar() {
       });
     }
   };
+
+  const lngs = {
+    en: { nativeName: 'English' },
+    es: { nativeName: 'Español' },
+  };
+
+  const { t, i18n } = useTranslation();
+
   useEffect(() => {
     if (localStorage.getItem('theme') === 'dark') {
       document.querySelector('html').setAttribute('class', 'dark');
@@ -60,7 +69,7 @@ export default function Navbar() {
                 <div className="flex-shrink-0 flex items-center">
                   <p className="font-Finger-Paint select-none dark:text-white hover:text-purple-700 dark:hover:text-purple-700 transition-colors duration-500">
                     <a href="#home">
-                      Lucas&apos;s Portfolio
+                      {t('navbar.title')}
                     </a>
                   </p>
                 </div>
@@ -90,6 +99,13 @@ export default function Navbar() {
                       <input className="switch" id="switch-desktop" type="checkbox" onClick={handleTheme} />
                       <span className="control" />
                     </label>
+                    <div>
+                      {Object.keys(lngs).map((lng) => (
+                        <button key={lng} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+                          {lngs[lng].nativeName}
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

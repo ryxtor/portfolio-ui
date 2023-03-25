@@ -37,7 +37,7 @@ const override = {
 function App() {
   return (
     <React.Suspense
-      fallback={<div style={styling}><DotLoader duration={10000} cssOverride={override} color="#7e22ce" size={50} /></div>}
+      fallback={<div style={styling}><DotLoader cssOverride={override} color="#7e22ce" size={50} /></div>}
     >
       <Navbar />
       <ToastContainer />

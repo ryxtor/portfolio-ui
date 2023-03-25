@@ -1,0 +1,8 @@
+{
+  "welcome": "Hola, mi nombre es",
+  "navbar": {
+    "title": "Inicio",
+    "about": "Sobre mi",
+    "contact": "Contacto"
+  }
+}

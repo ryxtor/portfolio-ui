@@ -3,6 +3,7 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 import { faAngleDown, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Typed from 'react-typed';
 import AOS from 'aos';
+import { useTranslation } from 'react-i18next';
 import me from '../images/me.webp';
 
 const Showcase = () => {
@@ -12,11 +13,13 @@ const Showcase = () => {
     delay: 300,
   });
 
+  const { t } = useTranslation();
+
   return (
     <div className="bg-gray-100 dark:bg-gray-800 transition duration-500">
       <div id="home" className="flex flex-col md:flex-row justify-center md:justify-around gap-y-10 items-center md:h-[95vh]">
         <div data-aos="zoom-in" className="w-100 order-last md:order-first">
-          <h1 className="transition duration-500 text-3xl text-center md:text-left text-gray-500 dark:text-gray-300 mb-4 font-Raleway">Hello! my name is</h1>
+          <h1 className="transition duration-500 text-3xl text-center md:text-left text-gray-500 dark:text-gray-300 mb-4 font-Raleway">{t('welcome')}</h1>
           <h2 className="mb-4 text-center md:text-left text-5xl text-gray-500 dark:text-gray-300 hover:text-purple-700 dark:hover:text-purple-700 transition-colors duration-500 font-Finger-Paint">Lucas Bonnefon</h2>
           <p className="text-center md:text-left text-purple-700 dark:text-purple-600 text-2xl font-Raleway mb-6">
             <Typed
