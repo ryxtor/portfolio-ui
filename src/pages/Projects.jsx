@@ -5,7 +5,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
     (async () => {
-      const response = await fetch('https://portfolio-ryxtor-api.herokuapp.com/v1/projects');
+      const response = await fetch('https://portfolio-j0yt.onrender.com/v1/projects');
       if (response.ok) {
         const data = await response.json();
         setProjects(data);
